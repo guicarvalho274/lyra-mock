@@ -1,0 +1,58 @@
+{
+  "name": "@lyra-mock-api/core",
+  "version": "0.0.1",
+  "description": "Pure JS mock API — register, validate, and resolve mocks with zero dependencies",
+  "license": "MIT",
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./index.d.ts",
+        "default": "./index.mjs"
+      },
+      "require": {
+        "types": "./index.d.cts",
+        "default": "./index.cjs"
+      },
+      "default": "./index.mjs"
+    },
+    "./src/composable/state.js": {
+      "import": "./src/composable/state.mjs",
+      "require": "./src/composable/state.cjs"
+    },
+    "./src/composable/state.mjs": "./src/composable/state.mjs",
+    "./src/composable/state.cjs": "./src/composable/state.cjs",
+    "./src/utils/*": {
+      "import": "./src/utils/*.mjs",
+      "require": "./src/utils/*.cjs"
+    }
+  },
+  "files": [
+    "index.ts",
+    "index.mjs",
+    "index.cjs",
+    "index.d.ts",
+    "index.d.cts",
+    "src/",
+    "LICENSE",
+    "CHANGELOG.md",
+    "README.md"
+  ],
+  "main": "./index.cjs",
+  "module": "./index.mjs",
+  "types": "./index.d.ts",
+  "keywords": [
+    "mock",
+    "api",
+    "testing",
+    "stub",
+    "intercept"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "build:types": "tsc",
+    "clean": "node -e \"const fs=require('fs'),p=require('path');function rm(d){if(!fs.existsSync(d))return;fs.readdirSync(d).forEach(f=>{const fp=p.join(d,f);fs.statSync(fp).isDirectory()?rm(fp):fs.unlinkSync(fp)});fs.rmdirSync(d)};rm('./dist')\"",
+    "prepublishOnly": "npm run build",
+    "pack:dry": "npm pack --dry-run"
+  }
+}

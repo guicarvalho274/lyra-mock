@@ -1,0 +1,24 @@
+{
+  "name": "lyra-mock",
+  "version": "0.0.1",
+  "private": true,
+  "description": "Mock system with layered architecture — pure JS API core + Vue 3 plugin",
+  "license": "MIT",
+  "type": "module",
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "npm run build --workspaces --if-present",
+    "clean": "npm run clean --workspaces --if-present",
+    "pack": "npm pack --workspaces",
+    "pack:dry": "npm pack --workspaces --dry-run"
+  },
+  "keywords": [
+    "mock",
+    "api",
+    "testing",
+    "vue",
+    "nuxt"
+  ]
+}

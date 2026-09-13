@@ -1,0 +1,33 @@
+{
+  "name": "@lyra-mock/core",
+  "version": "0.0.1",
+  "description": "Vue 3 / Nuxt mock plugin with Shadow DOM, CSS variables, and toggle UI",
+  "license": "MIT",
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "files": [
+    "src/",
+    "LICENSE",
+    "README.md"
+  ],
+  "scripts": {
+    "build:css": "node scripts/inline-css.js"
+  },
+  "keywords": [
+    "mock",
+    "vue",
+    "nuxt",
+    "testing",
+    "ui"
+  ],
+  "peerDependencies": {
+    "vue": ">=3.0.0"
+  },
+  "peerDependenciesMeta": {
+    "vue": {
+      "optional": true
+    }
+  }
+}

@@ -1,0 +1,1 @@
+export { stateMock as stateMock } from './src/composable/state';

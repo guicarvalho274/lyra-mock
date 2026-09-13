@@ -1,0 +1,44 @@
+.toogle{
+    width: 28px;
+    height: 18px;
+    border-radius: 9999px;
+    position: relative;
+    transition: .4s cubic-bezier(0.2, 0.8, 0.2, 1);
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.toogle::before,
+.toogle::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    box-shadow: var(--lyra-mock-box-shadow-light);
+}
+
+.toogle::before {
+    transform: translateY(-50%) translateX(2px);
+    transition: transform 0.2s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.toogle::after {
+    transform: translateY(-50%) translateX(2px);
+    transition: transform 0.250s cubic-bezier(0.2, 0.8, 0.2, 1) 0.04s;
+}
+
+.toogle.active::before {
+    transform: translateY(-50%) translateX(14px);
+    transition: transform 0.250s cubic-bezier(0.2, 0.8, 0.2, 1) 0.04s;
+}
+
+.toogle.active::after {
+    transform: translateY(-50%) translateX(14px);
+    transition: transform 0.2s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.toogle:hover {
+  filter: brightness(0.95);
+}

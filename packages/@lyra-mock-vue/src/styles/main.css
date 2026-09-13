@@ -1,0 +1,128 @@
+:root {
+  --lyra-mock-font-core: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial,
+    Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+    --font-core-mock-lyra: var(--lyra-mock-font-core);
+  --lyra-mock-color-bg: #fff;
+  --lyra-mock-bg-active: #22c55e;
+  --lyra-mock-radius-md: 6px;
+
+    --lyra-mock-font-weight-light: 300;
+    --lyra-mock-font-weight-regular: 400;
+    --lyra-mock-font-weight-medium: 500;
+    --lyra-mock-font-weight-semibold: 600;
+    --lyra-mock-font-weight-bold: 700;
+    --lyra-mock-font-weight-extrabold: 800;
+    --lyra-mock-font-weight-black: 900;
+
+    --lyra-mock-color-text-dark: #3b3b3b;
+    --lyra-mock-color-text-gray: #8a8a8a;
+    --lyra-mock-color-text-darkness: #777779;
+    --lyra-mock-background-color-el: #D9D9D9;
+    --lyra-mock-color-border: #eaeaea;
+    --lyra-mock-color-foregound-color: white;
+    --lyra-mock-color-white-bg-hover:#f5f5f5; 
+    --lyra-mock-box-shadow-light: 0px 4px 15px rgba(0, 0, 0, 0.048);
+
+    --lyra-mock-font-size-minimum: clamp(11px, 1.4vw, 13px);
+    --lyra-mock-font-clamp-title: clamp(12px, 1.3vw, 14px);
+    --lyra-mock-font-size-tag: clamp(8px, 1.2vw, 10px);
+
+    --lyra-mock-padding-inline-16x: 16px;
+}
+
+[data-lyra-mock], 
+[data-lyra-mock] * {
+    font-family: var(--font-core-mock-lyra);
+    font-weight: var(--lyra-mock-font-weight-regular);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+[data-lyra-mock] .flex-column{
+  display: flex;
+  flex-direction: column;
+}
+
+[data-lyra-mock] .flex{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+[data-lyra-mock] .inline-flex{
+    display: inline-flex;
+}
+
+[data-lyra-mock] .flex-justify-start{
+    justify-content: flex-start;
+}
+
+[data-lyra-mock] .flex-justify-end{
+    justify-content: flex-end;
+}
+
+[data-lyra-mock] .flex-justify-center{
+    justify-content: center;
+}
+
+[data-lyra-mock] .flex-align-center{
+    align-items: center;
+}
+
+[data-lyra-mock] .flex-align-start{
+    align-items: flex-start;
+}
+
+[data-lyra-mock] .flex-align-end{
+    align-items: flex-end;
+}
+
+[data-lyra-mock] .w100{
+    width: 100%;
+}
+
+[data-lyra-mock] [data-lyra-mock-title].title{
+    font-size: var(--lyra-mock-font-clamp-title);
+    color: var(--lyra-mock-color-text-dark);
+    font-weight: var(--lyra-mock-font-weight-bold);
+}
+
+[data-lyra-mock] [data-lyra-mock-subtitle].subtitle-mock{
+    font-size: var(--lyra-mock-font-size-minimum);
+    font-weight: var(--lyra-mock-font-weight-medium);
+    color: var(--lyra-mock-color-text-gray);
+    padding-inline: var(--lyra-mock-padding-inline-16x);
+}
+
+[data-lyra-mock] [data-lyra-mock-title-action].title-mock-action{
+    font-size: var(--lyra-mock-font-size-minimum);
+    color: var(--lyra-mock-color-text-darkness);
+    font-weight: var(--lyra-mock-font-weight-bold);
+    white-space: nowrap;
+}
+
+[data-lyra-mock] [data-lyra-mock-toogle].toogle{
+    background-color: var(--lyra-mock-background-color-el);
+}
+
+[data-lyra-mock] [data-lyra-mock-toogle].toogle.active{
+    background: var(--lyra-mock-bg-active);
+}
+
+[data-lyra-mock] [data-lyra-mock-toogle].toogle::before,
+[data-lyra-mock] [data-lyra-mock-toogle].toogle::after {
+    background-color: var(--lyra-mock-color-foregound-color);
+}
+
+
+[data-lyra-mock] [data-lyra-mock-tag-action].tag{
+    border-radius: 30px;
+    background: var(--lyra-mock-color-border);
+}
+
+[data-lyra-mock] [data-lyra-mock-tag-action].tag span{
+    font-size: var(--lyra-mock-font-size-tag);
+    color: var(--lyra-mock-color-text-darkness);
+    font-weight: var(--lyra-mock-font-weight-medium);
+}

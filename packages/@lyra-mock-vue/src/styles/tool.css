@@ -1,0 +1,41 @@
+
+.item{
+    padding-block: 8px;
+    padding-inline: var(--lyra-mock-padding-inline-16x);
+    border-bottom: 1px solid var(--lyra-mock-color-border);
+}
+
+.item:not(.perm):last-child{
+    border-bottom: none;
+}
+
+.item.not-border{
+    border-bottom: none;
+}
+
+.item .internal{
+    width: 100%;
+    height:32px;
+}
+
+.item .internal h4{
+    line-height:1.2;
+}
+
+.item .internal{
+    gap: 6px;
+}
+
+.item .internal .icon-type{
+    width: 14px;
+    height: 14px;
+    position: relative;
+    top: -2px;
+    color: var(--lyra-mock-color-text-gray);
+    transition: color .3s ease-in-out;
+    cursor: help;
+}
+
+.item .internal .icon-type:hover{
+    color: var(--lyra-mock-color-text-dark);
+}
